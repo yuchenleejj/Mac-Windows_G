@@ -18,6 +18,11 @@ class Notion:
         res = requests.post(readUrl,headers=headers)
         print(res.status_code)
 
+        dataj = res.json()
+        
+        with open('data.json','w') as f:
+            json.dump(dataj,f,ensure_ascii=False,indent=4)
+
 
     def create_page(self):
         pass
