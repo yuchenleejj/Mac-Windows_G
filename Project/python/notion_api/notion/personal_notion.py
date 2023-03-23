@@ -1,5 +1,6 @@
 import requests
 import json
+import pandas
 
 print(1)
 class Notion:
@@ -20,7 +21,7 @@ class Notion:
 
         dataj = res.json()
         
-        with open('data.json','w') as f:
+        with open('data.json','w',encoding='UTF-8') as f:
             json.dump(dataj,f,ensure_ascii=False,indent=4)
 
 
